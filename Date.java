@@ -7,9 +7,9 @@ public class Date {
 
     //Constructor that accepts month, day and year
     public Date(int month, int day, int year){
-    this.month = month;
-    this.day = day;
-    this.year = year;
+    setMonth(month); 
+    setDay(day);
+    setYear(year);
     }
     
     public int getMonth(){
@@ -27,8 +27,8 @@ public class Date {
     public void setMonth(int month){
     //while statement for input validation
     while(month < 1 || month > 12){
-        System.out.println("Invalid Input: Please enter a number between 1 & 12");
-        this.month = 1;
+        System.out.println("Invalid Input: Please enter a number between 1 & 12 for Month");
+        month = 1;
 
     }
         this.month = month;
@@ -37,8 +37,8 @@ public class Date {
     public void setDay(int day){
     //while statement for input validaton
     while(day < 1 || day > 31){
-        System.out.println("Ivalid Input: Please enter a number between 1 & 31");    
-        this.day = 1;
+        System.out.println("Ivalid Input: Please enter a number between 1 & 31 for Day");    
+        day = 1;
     }
         this.day = day;
     }//end of setter method for day

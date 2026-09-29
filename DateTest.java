@@ -16,13 +16,15 @@ public class DateTest {
    
     //testing invalid inputs
     Date invalidDate = new Date(14, 36, 2026);
-    invalidDate.displayNumeric();
+    
    
-    //updating dateTwo with setter method
+    //updating dateTwo with setter methods
     dateTwo.setMonth(10);
     dateTwo.setDay(15);
     dateTwo.setYear(2025);
-
+    
+    //retrieving udpated dateTwo data with getter methods
+    System.out.println();
     System.out.println("Updated Month for Date Two is " + dateTwo.getMonth());
     System.out.println("Updated Day for Date Two is " + dateTwo.getDay()); 
     System.out.println("Updated Year for Date Two is " + dateTwo.getYear());
