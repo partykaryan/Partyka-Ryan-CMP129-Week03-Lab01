@@ -12,10 +12,24 @@ public class Date {
     this.year = year;
     }
     
+    public int getMonth(){
+        return month;
+    }
+
+    public int getDay(){
+        return day;
+    }
+ 
+    public int getYear(){
+        return year;
+    }
+
     public void setMonth(int month){
     //while statement for input validation
     while(month < 1 || month > 12){
         System.out.println("Invalid Input: Please enter a number between 1 & 12");
+        this.month = 1;
+
     }
         this.month = month;
     }//end of setter method for month
@@ -23,7 +37,8 @@ public class Date {
     public void setDay(int day){
     //while statement for input validaton
     while(day < 1 || day > 31){
-        System.out.println("Ivalid Input: Please enter a number between 1 & 31");     
+        System.out.println("Ivalid Input: Please enter a number between 1 & 31");    
+        this.day = 1;
     }
         this.day = day;
     }//end of setter method for day
@@ -34,6 +49,14 @@ public class Date {
         this.year = year;
     }
 
+//Converting to month name using array    
+private String convertMonthName() {
+String [] monthNames = { "January" , "February" , "March" , "April" , "May" , 
+"June" , "July" , "August" , "September" , "October" , "November" , "December"
+};
+ return monthNames[month-1];
+}
+
 //Display methods
 
 //for displaying in format 12/25/2014
@@ -43,11 +66,11 @@ public void displayNumeric(){
 
 //for displaying in format December 25,2014
 public void displayMonthFirst(){
-     System.out.println(month + " " + day + ", " + year);
+     System.out.println(convertMonthName() + " " + day + ", " + year);
 }
 
 //for displaying in format 25 December 2014
 public void displayDayFirst(){
-     System.out.println(day + " " + month + year);
+     System.out.println(day + " " + convertMonthName() + " " + year);
 }
 }//end of public class
